@@ -9,9 +9,10 @@ function string_addition(string) {
   string = string.trim();
   if (string.trim() === "") {
     return 0;
-  } else {
-    return Number(string);
   }
+  let nums = [1];
+
+  return nums.reduce((a, b) => a + b);
 }
 
 exports.add = add;
