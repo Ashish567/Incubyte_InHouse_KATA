@@ -7,11 +7,20 @@ function add(numbers) {
 
 function string_addition(string) {
   string = string.trim();
+  string = string
+    .split("")
+    .filter((el) => el !== "")
+    .join("");
   if (string.trim() === "") {
     return 0;
   }
-  let nums = [1];
-
+  let nums = [];
+  string.split(",").forEach((element) => {
+    if (typeof element === "number") {
+      nums.push(Number(element));
+    }
+  });
+  //   return nums;
   return nums.reduce((a, b) => a + b);
 }
 
