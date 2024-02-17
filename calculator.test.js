@@ -24,3 +24,6 @@ test("string with two numbers as comma seperated string and various delimeters s
 //     )
 //   ).toBe(6);
 // });
+test("string having values greater than 1000 should throw error", () => {
+  expect(calculator.string_addition("10002")).toBe("UNKNOWN ERROR");
+});
