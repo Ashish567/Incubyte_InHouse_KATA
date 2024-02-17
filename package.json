@@ -1,0 +1,15 @@
+{
+  "name": "incubyte_inhouse_kata",
+  "version": "1.0.0",
+  "description": "Creating a calculator based on TDD",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
