@@ -1,9 +1,4 @@
-function add(numbers) {
-  return numbers
-    .split(",")
-    .map((x) => parseInt(x))
-    .reduce((a, b) => a + b);
-}
+// Code to handle nums in string format supporting ignoring delimeters
 
 function string_addition(string) {
   try {
@@ -12,6 +7,8 @@ function string_addition(string) {
       return 0;
     } else if (parseInt(string) > 1000) {
       throw new Error("UNKNOWN ERROR");
+    } else if (parseInt(string) < 0) {
+      throw new Error("negatives not allowed");
     } else {
       string = string
         .split("")
@@ -32,7 +29,5 @@ function string_addition(string) {
     return error.message;
   }
 }
-console.log(string_addition("10002"));
 
-exports.add = add;
 exports.string_addition = string_addition;
